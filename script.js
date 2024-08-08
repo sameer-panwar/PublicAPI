@@ -17,18 +17,20 @@ function getData(){
 
     if(userId=== ''){
         alert("Enter the Id please");
+    }else if(userId>10){
+        document.querySelector('.name')
+            .innerHTML="Enter ID between 1-10";
+    }else{
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data =>{
+                DisplayData(data);
+            })
+            .catch(error=>{
+                console.log("Error fetching current data:",error);
+                alert("Error Fetching User Data");
+            })
     }
-
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data =>{
-            DisplayData(data);
-        })
-        .catch(error=>{
-            console.log("Error fetching current data:",error);
-            alert("Error Fetching User Data");
-        })
 }
 
 
