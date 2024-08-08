@@ -15,7 +15,7 @@ body{
     height: 80%;
     width: 600px;
     align-items: center;
-    margin: 100px 100px;
+    margin: 50px 100px;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@ input{
 
 .search:hover{
     background-color: rgb(12, 176, 12);
-    border: 1px solid black;
+    border: 3px solid black;
 }
 
 img{
@@ -89,6 +89,13 @@ button{
     border-radius: 10px;
     color: white;
     font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s ease, border 0.3s ease;
+}
+
+button:hover{
+    opacity: 0.7;
+    border: 3px solid black;
 }
 
 p{
