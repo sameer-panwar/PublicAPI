@@ -36,14 +36,18 @@ function DisplayData(data){
      const name=document.querySelector('.name');
      const details=document.querySelector('.details');
 
-     name.innerHTML=data.name;
+     nameHTML=`
+        <div style="color:black;">You are</div>
+        <div>${data.name}</div>`;
+
+     name.innerHTML=nameHTML;
 
      detailsHTML=`
         <ul>
-            <li>Username:${data.username}</li>
-            <li>Email:${data.email}</li>
-            <li>Phone:${data.phone}</li>
-            <li>Website:${data.website}</li>
+            <li><span>Username:</span>${data.username}</li>
+            <li><span>Email:</span>${data.email}</li>
+            <li><span>Phone:</span>${data.phone}</li>
+            <li><span>Website:</span>${data.website}</li>
         </ul>
         <div>
             <p>Wanna know in which company he is working currently??<p>
@@ -67,9 +71,9 @@ function displayCompany(data){
     companyOutput.innerHTML='';
     companyOutput.innerHTML=`
     <div>
-        Name: ${data.company.name}<br>
-        catchPhrase: ${data.company.catchPhrase}<br>
-        Bs: ${data.company.bs}<br>
+        <span>Name:</span> ${data.company.name}<br>
+        <span>catchPhrase:</span> ${data.company.catchPhrase}<br>
+        <span>Bs:</span> ${data.company.bs}<br>
     </div>
 `;  
 }
