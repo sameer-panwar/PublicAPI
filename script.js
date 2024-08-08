@@ -64,6 +64,7 @@ function DisplayData(data){
 
 function displayCompany(data){
     const companyOutput=document.querySelector('.companyOutput'); 
+    companyOutput.innerHTML='';
     companyOutput.innerHTML=`
     <div>
         Name: ${data.company.name}<br>
@@ -76,6 +77,7 @@ function displayCompany(data){
 
 function displayNoStatement(){
     const companyOutput=document.querySelector('.companyOutput');
+    companyOutput.innerHTML='';
     companyOutput.innerHTML="Okay!  Have a good day!";
 }
     
